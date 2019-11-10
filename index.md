@@ -1,5 +1,5 @@
 ---
-layout: prev
+layout: default
 ---
 
 # Coder way
