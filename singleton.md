@@ -87,6 +87,28 @@ public class Singleton {
 }
 </pre>
 在调用<code>Singleton.getInstance()</code>时候的加载顺序<br/>
+DCL存在失效问题，一个线程正在执行<code>new Singleton();</code>开辟内存空间，没开辟完成时，另一个线程进来发现instance实例不是空，直接返回了。于是有了下面解决方案
+<pre>
+public class Singleton {
+    private Singleton() {
+        // 私有化构造方法，外部不能通过new来创建实例
+    }
+
+    private volatile static Singleton instance = null;// 延迟加载，没有立即开辟内存空间初始化变量，去掉了final修饰符，表示该变量的值可被修改。volatile 轻量级的同步
+
+    public static Singleton getInstance() {
+        if(instance == null) {
+            // 某一个线程获取类锁
+            synchronized (Singleton.class) {
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+</pre>
 
 
 ## 静态内部类方式实现单例
