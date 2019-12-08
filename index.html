@@ -8,7 +8,7 @@
 <body>
   <div id="menu">
         <el-row class="left-menu">
-            <el-col :span="12">
+            <el-col :span="6">
                 <el-menu
                 default-active="1"
                 class="el-menu-vertical"
@@ -19,9 +19,12 @@
                 active-text-color="#ffd04b">
                 <el-submenu index="1">
                     <template slot="title">
-                        <i class="el-icon-document"></i>
-                        <span>Eureka 注册中心</span>
+                        <i class="el-icon-menu"></i>
+                        <span>Java 基础</span>
                     </template>
+                    <el-menu-item-group>
+                        <el-menu-item title="历史" index="1-1">选项1</el-menu-item>
+                    </el-menu-item-group>
                 </el-submenu>
                 <el-menu-item index="2">
                     <i class="el-icon-document"></i>
