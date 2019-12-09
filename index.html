@@ -7,7 +7,18 @@
   <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
+  <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+          <el-main>Main</el-main>
+          <el-footer>Footer</el-footer>
+        </el-container>
+      </el-container>
+  </el-container>
   <div id="menu">
+
         <el-row class="left-menu">
             <el-col :span="6">
                 <el-menu
@@ -47,7 +58,6 @@
       el: '#menu',
       methods: {
       handleOpen(key, keyPath) {
-        debugger;
         console.log(key, keyPath);
       },
       handleClose(key, keyPath) {
