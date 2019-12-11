@@ -63,11 +63,17 @@
   <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
   <script type="module">
     var layout = new Vue({
-      el: "#layout"
+      el: "#layout",
+      data: function() {
+        return {}
+      }
     });
 
     var menu = new Vue({
       el: '#menu',
+      data: function() {
+        return {}
+      },
       methods: {
         handleOpen(key, keyPath) {
           console.log(key, keyPath);
