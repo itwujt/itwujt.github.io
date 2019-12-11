@@ -38,9 +38,13 @@
 
 
   .header-left {
+    float: left;
+    line-height: 100px;
     color: #999999;
   }
 
   .header-right {
+    float: right;
+    line-height: 100px;
     color: #999999;
   }
