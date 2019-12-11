@@ -62,20 +62,21 @@
   <!-- import JavaScript -->
   <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
   <script type="module">
-    var menu = new Vue({
-      el: '#menu',
-      methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
-    }
-    });
-
     var layout = new Vue({
       el: "#layout"
     });
+
+    var menu = new Vue({
+      el: '#menu',
+      methods: {
+        handleOpen(key, keyPath) {
+          console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+          console.log(key, keyPath);
+        }
+      }
+    });
+
   </script>
 </html>
