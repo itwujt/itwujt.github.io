@@ -19,7 +19,7 @@
       </el-header>
       <el-container>
         <el-aside width="200px">
-            <div id="menu">
+            <!-- <div id="menu">
                 <el-row>
                     <el-col :span="6">
                         <el-menu
@@ -48,7 +48,7 @@
                         </el-menu-item>
                     </el-col>
                 </el-row>
-          </div>
+          </div> -->
         </el-aside>
         <el-main>Main</el-main>
       </el-container>
@@ -63,26 +63,20 @@
   <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
   <script type="module">
     var layout = new Vue({
-      el: "#layout",
-      data: function() {
-        return {}
-      }
+      el: "#layout"
     });
 
-    var menu = new Vue({
-      el: '#menu',
-      data: function() {
-        return {}
-      },
-      methods: {
-        handleOpen(key, keyPath) {
-          console.log(key, keyPath);
-        },
-        handleClose(key, keyPath) {
-          console.log(key, keyPath);
-        }
-      }
-    });
+    // var menu = new Vue({
+    //   el: '#menu',
+    //   methods: {
+    //     handleOpen(key, keyPath) {
+    //       console.log(key, keyPath);
+    //     },
+    //     handleClose(key, keyPath) {
+    //       console.log(key, keyPath);
+    //     }
+    //   }
+    // });
 
   </script>
 </html>
